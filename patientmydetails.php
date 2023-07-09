@@ -1,0 +1,73 @@
+<?php
+session_start();
+   
+
+
+?>
+
+<html>
+<head>
+<title> my page</title>
+<style type="text/css" rel="stylesheet">
+
+input[type=text]
+{
+    border: 3px solid blue;
+}
+input[type=mail]
+{
+    border: 3px solid blue;
+}
+input[type=password]
+{
+    border: 3px solid blue;
+}
+input[type=number]
+{
+    border: 3px solid blue;
+}
+input[type=radio]
+{
+    border: 3px solid blue;
+}
+
+
+tr:nth-child(odd)
+{
+    background-color: lightpink;
+}
+tr:nth-child(even)
+{
+    background-color: lightyellow;
+}
+tr:hover{
+    background-color:orange;
+    }
+table
+{
+    box-shadow:20px 20px 20px 1px  grey;
+    border-style: groove;
+    
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<form name="my form" action="" method="post">
+<center><h1>My Details</h1></center>
+<table border=5 width="500px" align="center" bordercolor="grey">
+<tr><td>Patient Id </td> <td><input type="text" name="pid" readonly="true" value="<?php echo $_SESSION['ID']; ?>" /></td> </tr>
+<tr><td>Patient Name </td><td><input type="text" name="pnm"readonly="true" value="<?php echo $_SESSION['NM']; ?>" /></td> </tr>
+<tr><td>Email </td><td><input type="text" name="mail"readonly="true" value="<?php echo $_SESSION['MAIL']; ?>" /></td> </tr>
+<tr><td>Contact No</td><td><input type="text" name="mob"readonly="true"value="<?php echo $_SESSION['CN']; ?>" /></td> </tr>
+<tr><td>Address </td><td><input type="text" name="addr"readonly="true" value="<?php echo $_SESSION['ADDR']; ?>" /></td> </tr>
+</table>
+</form></body></html>
+
+
